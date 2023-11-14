@@ -1,0 +1,19 @@
+
+
+docker pull nvcr.io/nvidia/pytorch:22.12-py3
+
+docker run -idt -v /home/wasadmin/workspace:/home/wasadmin/workspace -w /home/wasadmin/workspace/yolov8 -p 7000:7000 --name ac-yolov8-ctnr nvcr.io/nvidia/pytorch:22.12-py3
+
+
+
+docker run -idt -v /home/wasadmin/workspace:/home/wasadmin/workspace -w /home/wasadmin/workspace/yolov8 -p 7000:7000 --name ac-yolov8-ctnr ultralytics/ultralytics:latest
+
+docker exec -it ac-yolov8-ctnr bash
+
+docker rm -f ac-yolov8-ctnr
+
+
+
+bash ./00_env/ac_env.sh
+
+
